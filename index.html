@@ -1,49 +1,246 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <title>Translation by coderLMN</title>
-  </head>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="author" content="coderLMN">
+	<title>伯乐在线翻译小组内部交流</title>
+	<style>
+			/* All the CSS 3 properties used in this demo */
+		* { margin: 0; padding: 0; list-style: none; -webkit-backface-visibility: hidden; backface-visibility: hidden;}
+		img { display: block; }
+		.back-img { position:absolute; left:0px; top:0px; z-index:-1;}
+		html, body { width: 100%; height: 100%; overflow: hidden; font-family: '微软雅黑';}
+		.background {background-size:cover; background-image: url("vim.jpg");
+			-webkit-filter: blur(3px);
+			-moz-filter: blur(3px);
+			-o-filter: blur(3px);
+			-ms-filter: blur(3px);
+			filter: blur(3px);
+			position:absolute;
+			width:100%;
+			height:100%;
+		}
+		body {color:darkslategray; font-family: Arial, sans-serif; background-color: #333;}
+		.title { margin-left: 8%; margin-top: 25%; font-size: 3em;}
+		.signature {margin-top: 5%; margin-right: 5%;}
+		.pull-right{float:right;}
+		.right-text {float:right; margin-left: 50%; width: 50%;}
+		.left-img {display: inline-block; background-image: url('tf.jpg');background-repeat: no-repeat;background-size: 45%;width: 100%;height: 70%;}
+		i.redspot {
+			height: 10px;
+			width: 10px;
+			border-radius: 5px;
+			background-color: red;
+			display: inline-block;
+			vertical-align: middle;
+			margin-right: 8px;
+		}
+		.highlight {background-color: yellow;}
+		#view { width: 800px; margin: 0 auto; height: 1000px; left: -200px; position: relative; -webkit-transform-style: preserve-3d; transform-style: preserve-3d;}
+		#page { position: relative; width: 100%; height: 100%; margin-top: 15%; -webkit-perspective-origin: 100% 100%; perspective-origin: 100% 100%;  -webkit-perspective: 1200px; perspective: 1200px;}
+		#page> li {
+			display: block; padding: 15px;
+			background-Color: lightyellow;
+			border-radius: 10px;
+			box-shadow: 5px -5px 3px #888888;
+			position: absolute; top: 0; left: 0; width: 1000px; height: 700px; -webkit-transition: all 1s linear 0s;transition: all 1s linear 0s;
+		}
+	</style>
+</head>
+<body>
+<div class="background"></div>
+<div id="view">
+	<ul id="page">
+		<li id="1" onclick="jumpTo(1)" style="z-index: 100;">
+			<h2>伯乐在线翻译小组内部交流<small class="pull-right">Jan. 17th, 2015</small></h2>
+			<hr>
+			<h1 class="title">翻译技术文章<b>"信、达、雅"</b>的一点体会</h1>
+			<h3 class="signature pull-right">@老码农的自留地</h3>
+		</li>
+		<li id="2" onclick="jumpTo(2)" style="z-index: 90;">
+			<h2>翻译技术文章的基本功</h2>
+			<hr>
+			<div class="left-img">
+				<span class="right-text">
+					<h2 class="signature"><i class="redspot"></i>英语阅读 -- 准确把握技术文章的逻辑和细节</h2>
+					<h2 class="signature"><i class="redspot"></i>汉语表达 -- 准确地描述文章中的思路、原理和技术实现</h2>
+					<h2 class="signature"><i class="redspot"></i>技术素养 -- 把握技术方向，理解技术细节，必要时通过译者注形式给读者补充背景知识</h2>
+				</span>
+			</div>
+			<hr>
+			<h1 class="highlight">要翻译好技术文章，译者首先自己要深刻理解文章的内容。以此为基础，仔细推敲中文的表达，才能使读者通过译文准确理解原文的内容。</h1>
+		</li>
+		<li id="3" onclick="jumpTo(3)" style="z-index: 80;">
+			<h2>我对技术翻译中信、达、雅的理解</h2>
+			<hr>
+			<h2 class="signature"><i class="redspot"></i>信 -- 忠于原文意思，不曲解、不泛化、不片面化</h2>
+			<hr>
+			<h3>@崔启亮-北京ISTQB：
+				【沙龙花絮1】昨天北京本地化沙龙上@熊白告 提到随着机器翻译技术的进步，机械的人工翻译会被机器翻译代替，创译才是竞争力，他以The waiter is very beautiful为例，如果译成“服务员很漂亮”则毫无亮点。如果翻译成“服务员长的很像奶茶妹，让我感觉自己像强哥”更能让新生代们欢迎。</h3>
+			<h3> (顺便说一句，waiter是男服务员，女服务员应该是waitress。）</h3>
+			<h2 class="signature"><i class="redspot"></i>达 -- 表达通顺，可以单独作为母语文章，不翻译成外国腔，更不要像机器翻译</h2>
+			<hr>
+			<h3>If people can't understand your vocabulary, they must assume that you are very intelligent and that your algorithms are very deep. （如果人们无法理解你的词汇，他们必须假设，你很聪明，你的算法是非常深刻的。)</h3>
+			<h2 class="signature"><i class="redspot"></i>雅 -- 文字优美，能够表达出原文的意境和作者的文风，带给读者良好的阅读体验</h2>
+			<hr>
+			<h3>民国大儒 伍光建 译《侠隐记》： 达特安看见那人来至跟前，便拔剑出鞘一尺。 那人并不管达特安发怒，便向楼窗两人说道：“这匹马少年时候，毛色似黄花。在花木中，黄色不算稀奇，只是世界上黄色的马，真算稀奇了。”达特安答道：“世上的人很有胆子笑马，却没胆子笑马的主人。”那人答道：“我并不十分喜欢笑，你看我面貌便知；但是我要笑时，别人却管不得。”达特安道：“我若不喜欢时，却不许人来笑我。”那人便用冷语答道：“果真如此，也无甚要紧。”转头便要行入店门。</h3>
+		</li>
+		<li id="4" onclick="jumpTo(4)" style="z-index: 70;">
+			<h2>一些翻译的例子</h2>
+			<hr>
+			<h2 class="signature"><i class="redspot"></i>Never ascribe to malice, that which can be explained by incompetence.  - Napoleon</h2>
+			<h2 class="signature"><i class="redspot"></i>The maintenance programmer views your code through a toilet paper tube. He can only see a tiny piece of your program at a time.</h2>
+			<h2 class="signature"><i class="redspot"></i>Avoid the assert() mechanism, because it could turn a three-day debug fest into a ten minute one.</h2>
+			<h2 class="signature"><i class="redspot"></i>If you have left the comments on those methods and variables untouched, and sufficiently cryptic, anyone maintaining the code will be too scared to touch them.</h2>
+			<h2 class="signature"><i class="redspot"></i>With fear gone, innovation and experimentation can blossom.</h2>
+			<h2 class="signature"><i class="redspot"></i>Roll Your Own -- You've always wanted to write system level code. Now is your chance. </h2>
+		</li>
+		<li id="5" onclick="jumpTo(5)" style="z-index: 60;">
+			<h2>翻译能力需要在平时积累，每天获得一点启发</h2>
+			<hr>
+			<video src="kim.mp4" controls style="margin-top: 15px;" width="1000"></video>
+			<h2 class="signature"><i class="redspot"></i>"They hate us because they ain't us." </h2>
+		</li>
+		<li id="6" style="z-index: 50;">
+			<h2>我的个人经验体会</h2>
+			<hr>
+			<div class="left-img">
+				<span class="right-text">
+					<h2 class="signature"><i class="redspot"></i>英语阅读 -- 大量阅读技术文章，提高语感和理解复杂句子的能力</h2>
+					<h2 class="signature"><i class="redspot"></i>汉语表达 -- 多写技术博客、杂文，和同行分享自己的心得体会</h2>
+					<h2 class="signature"><i class="redspot"></i>技术素养 -- 关注自己所在技术领域的新技术、新产品，业余时间做一些小项目，或者参与开源项目</h2>
+					<h2 class="signature"><i class="redspot"></i>其他 -- 关注除技术和所在行业之外的一些领域，扩展自己的知识面，培养业余兴趣，提高个人生活品味</h2>
+				</span>
+			</div>
+			<hr>
+			<h1 class="highlight">以上分享内容只是个人体会。水平有限，请大家多多指正。谢谢大家！</h1>
+		</li>
+	</ul> <!-- This is the place where all the slides will be added -->
+</div>
 
-  <body>
-    <div id="container">
-      <div class="inner">
+<script>
+	var space = -300;			// offset between neighboring items on Y and Z axis
+	var	pageSize = 6;			// number of items each page
+	var angle = 1;
+	var data = [];			// position of each item
+	data.push(new Item(0, 0, 0));     	//fill the first element data[0], so that the index == DOM li sequence
 
-        <header>
-          <h1>Translation</h1>
-          <h2>All about English translation</h2>
-        </header>
+	var current_index = 1;		// the sequence number of current item
+	var max_index = 0;			// the sequence number of the last item
+	var page = document.getElementById('page');	// the DOM element where the items are placed
 
-        <section id="downloads" class="clearfix">
-          <a href="https://github.com/coderLMN/translation/zipball/master" id="download-zip" class="button"><span>Download .zip</span></a>
-          <a href="https://github.com/coderLMN/translation/tarball/master" id="download-tar-gz" class="button"><span>Download .tar.gz</span></a>
-          <a href="https://github.com/coderLMN/translation" id="view-on-github" class="button"><span>View on GitHub</span></a>
-        </section>
+	function add(n){	// put a new item
+		if(! data[n]){
+			data.push(new Item(data[max_index].translate_y+space, data[max_index].translate_z+space, data[max_index].rotate_z+angel));
+		}
+		max_index ++;
+	}
 
-        <hr>
+	function Item(translate_y, translate_z, rotate_z){	// data structure for storing the positions
+		this.translate_y = translate_y;
+		this.translate_z = translate_z;
+		this.rotate_z = rotate_z;
+	}
+	for(var n=1; n<pageSize+1; n++){			// put 10 items initially
+		data.push(new Item(n*space, n*space, (n-1)*angle));
+		add(n);
+	};
+	for(var n=1; n<pageSize+1; n++){
+		animate(n, 0, 1);			// animate 10 items added
+	};
 
-        <section id="main_content">
-          <h1>
-<a id="translation" class="anchor" href="#translation" aria-hidden="true"><span class="octicon octicon-link"></span></a>translation</h1>
+	document.onkeydown = function(event) {
+		if(event.keyCode == '37' || event.keyCode == '40') {         //left or down  --> previous
+			prev();
+		}
+		else if(event.keyCode == '39' || event.keyCode == '38') {    //right or up --> next
+			next();
+		}
+	};
 
-<p>All about English translation</p>
-        </section>
+	function shortCut(event){
+		if(event.wheelDelta > 0){				// mouse wheel rolls forward
+			next();
+		}
+		else if(event.wheelDelta < 0){
+			prev();						// mouse wheel rolls backward
+		}
+	}
+	function shortCutFF(event) {				// only for Firefox, because it doesn't support onmousewheel event
+		if(event.detail < 0){					// mouse wheel rolls forward
+			next();
+		}
+		else if(event.detail > 0){
+			prev();						// mouse wheel rolls backward
+		}
+	}
+	if ("onmousewheel" in document) {
+		document.onmousewheel = shortCut;		// Webkit & IE
+	} else {
+		document.addEventListener('DOMMouseScroll', shortCutFF, false);	// firefox
+	}
 
-        <footer>
-          Translation is maintained by <a href="https://github.com/coderLMN">coderLMN</a><br>
-          This page was generated by <a href="http://pages.github.com">GitHub Pages</a>. Tactile theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.
-        </footer>
+	function jumpTo(n){					// keep moving forward to show the n th item
+		for(var i=current_index; i<n; i++){
+			next();
+		}
+	}
 
-        
-      </div>
-    </div>
-  </body>
+	function animate(n, y, opacity) {
+		var new_y = data[n].translate_y + y;
+		var new_z = data[n].translate_z + y;
+		var new_rz = data[n].rotate_z + angle*y/space;	// calculate new position of n th item
+
+		var elementN = document.getElementById(n);
+		elementN.onclick = function() {jumpTo(n)};
+		// animate n th item with CSS3 translate3d and rotate3d methods
+		elementN.style.webkitTransform = 'translateX('+ (-0.3*new_y) + 'px) translateY('+ new_y + 'px) translateZ(' + new_z + 'px) rotateZ(' + new_rz + 'deg)';
+		elementN.style.transform = 'translateX('+ (-0.3*new_y) + 'px) translateY('+ new_y + 'px) translateZ(' + new_z + 'px) rotateZ(' + new_rz + 'deg)';
+		if (opacity == 0) {
+			elementN.style.visibility = "hidden";
+		}
+		else {
+			elementN.style.visibility = "visible";
+		}
+		elementN.style.opacity = opacity;
+
+		data[n].translate_y = new_y;
+		data[n].translate_z = new_z;
+		data[n].rotate_z = new_rz;			// save its new position
+	}
+
+	function prev() {
+		if(current_index <= 1) return false;
+		document.getElementById(current_index-1).style.opacity = 1;	// show last item
+		current_index --;
+		for(var n=1; n<current_index; n++){		// update the positions of previous invisible items
+			animate(n, space, 0);
+		};
+		for(var n=current_index; n<current_index+pageSize; n++){	// update the positions of current visible items
+			animate(n, space, 1);
+		};
+		for(var n=current_index+pageSize; n<=max_index; n++){	// update the positions of next invisible items
+			animate(n, space, 0);
+		};
+	};
+
+	function next() {
+		if(current_index >= data.length || current_index==6) return false;
+		document.getElementById(current_index).style.opacity = 0;	//hide current item
+		current_index ++;
+
+		for(var n=1; n<current_index; n++){		// update the positions of previous invisible items
+			animate(n, -1*space, 0);
+		};
+		for(var n=current_index; n<current_index+pageSize; n++){	// update the positions of current visible items
+			animate(n, -1*space, 1);
+		};
+		for(var n=current_index+pageSize; n<=max_index; n++){	// update the positions of next invisible items
+			animate(n, -1*space, 0);
+		};
+	};
+</script>
+</body>
 </html>
